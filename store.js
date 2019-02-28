@@ -1,11 +1,10 @@
-var album = {
-    artistName: 'Kendrick Lamar',
-    albumName: 'DAMN.',
-    newRelease: false,
+class Album {
+    constructor(artist, name, genre, date, cover) {
+        this.artist = artist;
+        this.name = name;
+        this.genre = genre;
+        this.date = date;
+        this.cover = cover;
 
-    artistAlbum function(){
-        return this.artistName + " " + "-" + " " + this.albumName;
     }
 }
-
-artistAlbum();
