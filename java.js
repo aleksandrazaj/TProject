@@ -17,6 +17,7 @@ var album6 = new Album("Channel Orange","Frank Ocean","Hip Hop",false)
 
 var albums = [album1, album2, album3, album4, album5, album6];
 
+
 function printAlbums() {
     for (let i = 0; i < albums.length; i++) {
         console.log(albums[i].title)
@@ -24,6 +25,11 @@ function printAlbums() {
 }
 
 printAlbums();
+
+
+// albums.push() - adds elements to the array
+
+// albums.splice() - removes elements from the array
 
 //var albums = []
 //albums.push(album1)
