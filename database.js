@@ -7,6 +7,20 @@ class Album {
     this.date = date}
 }
 
+class User {
+    constructor(UserName,Password,EmailAddress,FirstName,LastName,Age,BillingAddress){
+    this.UserName = UserName
+    this.Password = Password
+    this.EmailAddress = Email 
+    this.FirstName = FirstName
+    this.LastName = LastName
+    this.age = Age
+    this.BillingAddress = BillingAddress
+    
+}
+
+
+
 var album1 = new Album("DAMN.","Kendrick Lamar","Hip Hop",false)
 var album2 = new Album("B4.DA.$$","Joey Bada$$","Hip Hop",false)
 var album3 = new Album("Self-Titled","Kids See Ghosts","Hip Hop",true)
