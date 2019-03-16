@@ -1,8 +1,8 @@
 class User {
-    constructor(username,password,emailAdress,firstName,lastName,age,billingAddress) {
+    constructor(username,password,emailAddress,firstName,lastName,age,billingAddress) {
     this.username = username
     this.password = password
-    this.emailddress = emailAdress
+    this.emailAddress = emailAddress
     this.firstName = firstName
     this.lastName = lastName
     this.age = age
@@ -14,3 +14,6 @@ var user2 = new User("notadmin","notadmin","gmail@gmail.com","John","Doe","18","
 
 var users = [user1, user2];
 
+// prevent deafult
+
+// Inheritence: subclass Admin
