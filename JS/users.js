@@ -6,8 +6,10 @@ class User {
     this.firstName = firstName
     this.lastName = lastName
     this.age = age
-    this.billingAddress = billingAddress}
+    this.billingAddress = billingAddress }
 }
+
+
 
 var user1 = new User("admin","admin","hackerman@hackerman.com","Kuba","Dejnek","12","Szczebrzeszyn")
 var user2 = new User("notadmin","notadmin","gmail@gmail.com","John","Doe","18","Copenhagen")
