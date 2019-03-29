@@ -34,6 +34,8 @@ var albums = [album1, album2, album3, album4, album5, album6];
 albums.push(new Album("Astroworld", "Travis Scott", "Hip Hop", true, "./covers/astroworld.jpg", "05"))
 albums.push(new Album("Lemonade", "Beyonce", "R&B", false, "./covers/lemonade.jpg", "07"))
 albums.push(new Album("1999", "Joey Bada$$", "Hip Hop", false, "./covers/1999.jpg", "02"))
+albums.push(new Album("Water[s]", "Mick Jenkins", "Hip Hop", false, "./covers/waters.jpg", "08"))
+albums.push(new Album("Konnichiwa", "Skepta", "Grime", false, "./covers/konnichiwa.jpg", "09"))
 
 // Function that creates albums as columns in HTML row "showAlbums"
 function displayElements() {
