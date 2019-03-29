@@ -22,27 +22,29 @@ imgage.src = "./covers/damn.jpg";
 damn.appendChild(image);*/
 
 class Album {
-    constructor(title, artist, genre, date, cover, albumId){
+    constructor(title, artist, genre, date, cover, artistId){
     this.title = title
     this.artist = artist
     this.genre = genre
     this.date = date
     this.cover = cover
-    this.albumId = albumId }
+    this.artistId = artistId }
 
     createHTML() {
         return "<div class='column'><img style='width:100%' src=" + this.cover + "></img><p>" + this.title + " " + this.artist + "</p></div>"
     }
-
+    createAlbumList() {
+        return "<div class='column'><img style='width:100%' src=" + this.cover + "></img><p>" + this.title + "</p></div>"
+    }
     
 }
 
-var album1 = new Album("DAMN.","Kendrick Lamar","Hip Hop",false, "./covers/damn.png", "./artists/kendrick.jpg", "01" )
-var album2 = new Album("B4.DA.$$","Joey Bada$$","Hip Hop",false, "./covers/badass.jpg", "./artists/joey.jpg", "02")
-var album3 = new Album("Self-Titled","Kids See Ghosts","Hip Hop", true, "./covers/ksg.jpg", "./artists/kanyex2.jpg", "03")
-var album4 = new Album("Slime Season 3","Young Thug","Hip Hop",false, "./covers/slime_season_3.jpg", "./artists/young.jpg", "04")
-var album5 = new Album("Rodeo","Travis Scott","Hip Hop",false, "./covers/rodeo.jpg", "./artists/travisscott.jpg", "05")
-var album6 = new Album("Channel Orange","Frank Ocean","Neo Soul",false, "./covers/channel_orange.jpg", "./artists/frank.jpg", "06")
+var album1 = new Album("DAMN.","Kendrick Lamar","Hip Hop",false, "./covers/damn.png", "01" )
+var album2 = new Album("B4.DA.$$","Joey Bada$$","Hip Hop",false, "./covers/badass.jpg", "02")
+var album3 = new Album("Self-Titled","Kids See Ghosts","Hip Hop", true, "./covers/ksg.jpg", "03")
+var album4 = new Album("Slime Season 3","Young Thug","Hip Hop",false, "./covers/slime_season_3.jpg", "04")
+var album5 = new Album("Rodeo","Travis Scott","Hip Hop",false, "./covers/rodeo.jpg", "05")
+var album6 = new Album("Channel Orange","Frank Ocean","Neo Soul",false, "./covers/channel_orange.jpg", "06")
 
 
 var albums = [album1, album2, album3, album4, album5, album6];
@@ -53,8 +55,8 @@ var albums = [album1, album2, album3, album4, album5, album6];
 
 
 
-albums.push(new Album("Astroworld", "Travis Scott", "Hip Hop", true, "./covers/astroworld.jpg", "07"))
-albums.push(new Album("Lemonade", "Beyonce", "R&B", false, "./covers/lemonade.jpg", "./artists/beyonce.jpg", "08"))
+albums.push(new Album("Astroworld", "Travis Scott", "Hip Hop", true, "./covers/astroworld.jpg", "05"))
+albums.push(new Album("Lemonade", "Beyonce", "R&B", false, "./covers/lemonade.jpg", "07"))
 
 function displayAlbums() {
     for (let i = 0; i < albums.length; i++) {
