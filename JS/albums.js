@@ -9,7 +9,7 @@ class Album {
     
     // Creates a new html file for each album
     createHTML() {
-        return "<div class='column'><img style='width:100%' src=" + this.cover + "></img><p>" + this.title + " " + this.artist + "</p></div>"
+        return "<div class='column'><img style='width:100%' src=" + this.cover + "></img><p>" + this.title + " " + this.artist + "</p><p><button>Add to Cart</button></p></div>"
     }
     createAlbumList() {
         return "<div class='column'><img style='width:100%' src=" + this.cover + "></img><p>" + this.title + "</p></div>"
