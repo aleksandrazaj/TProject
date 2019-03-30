@@ -9,7 +9,7 @@ class Artist {
     }
 }
 
-var artist1 = new Artist("Kendrick Lamar", "./artists/kendrick.jpg", "01")
+var artist1 = new Artist("Kendrick Lamar", "./artists/kendrick.png", "01")
 var artist2 = new Artist("Joey Bada$$", "./artists/joey.jpg", "02")
 var artist3 = new Artist("Kids See Ghosts", "./artists/ksg.jpg", "03")
 var artist4 = new Artist("Young Thug", "./artists/young.jpg", "04")
