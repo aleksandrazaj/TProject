@@ -1,5 +1,5 @@
 class Album {
-    constructor(title, artist, genre, date, cover, artistId, albumId, price, genreId){
+    constructor(title, artist, genre, date, cover, artistId, albumId, price, genreId, youtube){
     this.title = title
     this.artist = artist
     this.genre = genre
@@ -8,7 +8,8 @@ class Album {
     this.artistId = artistId
     this.albumId = albumId
     this.price = price
-    this.genreId = genreId }
+    this.genreId = genreId
+    this.youtube = youtube }
     
     // Creates a new html file for each album
     createHTML() {
@@ -31,12 +32,15 @@ class Album {
     }
  
     genreDisplayPage() {
-        return "<div class='column' onclick='genrePage(\"" + this.genreId +"\")'><img style='width:100%' src=" + this.cover + "></img><p>" + this.title + "</p><h1 style='color:green'>" + this.price + "</h1><p><button id='addCart'>Add to Cart</button></p></div>" 
+        return "<div class='column' onclick='genrePage(\"" + this.genreId +"\")'><img style='width:100%' src=" + this.cover + "></img><p>" + this.title + " " + this.artist + "</p><h1 style='color:green'>" + this.price + "</h1><p><button id='addCart'>Add to Cart</button></p></div>" 
+    }
+    youtubeSample() {
+        return "<div class='column'><button id='youtube'onclick='youtube(\"" + this.youtube + "\")'></button></div>"
     }
 }
 //Elements of the class
 
-var album1 = new Album("DAMN.","Kendrick Lamar","Hip Hop",false, "./covers/damn.png", "01", "01", "$7.99", "01" )
+var album1 = new Album("DAMN.","Kendrick Lamar","Hip Hop",false, "./covers/damn.png", "01", "01", "$7.99", "01", "https://www.youtube.com/watch?v=tvTRZJ-4EyI")
 var album2 = new Album("B4.DA.$$","Joey Bada$$","Hip Hop",false, "./covers/badass.jpg", "02", "02", "$8.49", "01")
 var album3 = new Album("SELF-TITLED","Kids See Ghosts","Hip Hop", true, "./covers/ksg.jpg", "03", "03", "$9.99", "01")
 var album4 = new Album("SLIME SEASON 3","Young Thug","Hip Hop",false, "./covers/slime_season_3.jpg", "04", "04", "$6.00", "01")
@@ -68,3 +72,15 @@ display.innerHTML = html;
 }
 
 displayElements();
+
+
+var youtubeSingle = this.youtube
+function youtube(youtubeLink) {
+    for (i = 0; i < albums.length; i++) {
+        if (albums[i].youtube === youtubeLink)
+    
+    location.replace(youtubeSingle)
+} }
+
+
+
