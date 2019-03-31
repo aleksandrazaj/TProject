@@ -6,6 +6,7 @@ function albumPage(selectedAlbum) {
         if (albums[i].albumId === selectedAlbum) {
             html += albums[i].albumDisplayPage();
             html += albums[i].albumInfo();
+            html += albums[i].youtubeSample();
     
                 
         }

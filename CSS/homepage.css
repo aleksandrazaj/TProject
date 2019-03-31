@@ -185,3 +185,17 @@
 
 }
 
+#albumPageDiv {
+  position: relative;
+    
+    margin: 3%;
+    overflow: hidden;
+    width: 400px;
+}
+#youtube {
+  width: 400px;
+  height: 200px;
+  background-image:url('youtube.jpg');
+  background-size:95%;
+  background-position: center;
+}
