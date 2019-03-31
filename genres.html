@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="CSS/homepage.css">
+    <title>Genres</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Genres</h1>
+    </div>
+              
+    <div class="topnav" id="theTopnav">
+        <a href="index5.html" class="active">Home</a>
+        <a href="newReleases.html">New releases</a>
+        <a href="genres.html">Genres</a>
+        <a href="artists.html">Artists</a>
+        <a href="#support">Support</a>
+        <a href="login.html">Log in</a>
+                
+    </div>
+              
+     <!--- Search bar --->
+<input type="text" id="myInput" onkeyup="search()" placeholder="Search for albums">
+              
+              <!--Row div that contains all the columns created by createHTML-->
+ <div class="row" id="showGenres"></div>
+              
+                
+                
+    <div class="footer"></div>
+
+
+
+<script src="JS/albums.js"></script>
+<script src="JS/genre.js"></script>
+<script src="JS/genrePage.js"></script>
+
+
+</body>
+</html>
