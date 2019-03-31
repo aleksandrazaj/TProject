@@ -1,4 +1,5 @@
 
+
 function albumPage(selectedAlbum) {
     var html = "";
     for (i = 0; i < albums.length; i++) {
