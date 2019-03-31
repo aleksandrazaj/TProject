@@ -193,9 +193,10 @@
     width: 400px;
 }
 #youtube {
-  width: 400px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   background-image:url('youtube.jpg');
-  background-size:95%;
+  background-size: 100%;
   background-position: center;
+  border: none;
 }
