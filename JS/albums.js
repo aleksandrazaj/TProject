@@ -42,7 +42,6 @@ class Album {
 
 }
 //Elements of the class
-<<<<<<< HEAD
 var albums = []
 albums.push(new Album("DAMN.","Kendrick Lamar","Hip Hop",false, "./covers/damn.png", "01", "01", "$7.99", "01", "https://youtu.be/tvTRZJ-4EyI"))
 albums.push(new Album("B4.DA.$$","Joey Bada$$","Hip Hop",false, "./covers/badass.jpg", "02", "02", "$8.49", "01"))
@@ -50,15 +49,6 @@ albums.push(new Album("SELF-TITLED","Kids See Ghosts","Hip Hop", true, "./covers
 albums.push(new Album("SLIME SEASON 3","Young Thug","Hip Hop",false, "./covers/slime_season_3.jpg", "04", "04", "$6.00", "01"))
 albums.push(new Album("RODEO","Travis Scott","Hip Hop",false, "./covers/rodeo.jpg", "05", "05", "$8.99", "01"))
 albums.push(new Album("CHANNEL ORANGE","Frank Ocean","Neo Soul",false, "./covers/channel_orange.jpg", "06", "07", "$7.49", "02"))
-=======
-var albums = [];
-var album1 = new Album("DAMN.","Kendrick Lamar","Hip Hop",false, "./covers/damn.png", "01", "01", "$7.99", "01", "https://youtu.be/tvTRZJ-4EyI")
-var album2 = new Album("B4.DA.$$","Joey Bada$$","Hip Hop",false, "./covers/badass.jpg", "02", "02", "$8.49", "01", "https://www.youtube.com/watch?v=C2lrvZlbHNk")
-var album3 = new Album("SELF-TITLED","Kids See Ghosts","Hip Hop", true, "./covers/ksg.jpg", "03", "03", "$9.99", "01", "https://www.youtube.com/watch?v=7hd65jvahmA")
-var album4 = new Album("SLIME SEASON 3","Young Thug","Hip Hop",false, "./covers/slime_season_3.jpg", "04", "04", "$6.00", "01", "https://www.youtube.com/watch?v=mEzRQYDVD_4")
-var album5 = new Album("RODEO","Travis Scott","Hip Hop",false, "./covers/rodeo.jpg", "05", "05", "$8.99", "01", "https://www.youtube.com/watch?v=KnZ8h3MRuYg")
-var album6 = new Album("CHANNEL ORANGE","Frank Ocean","Neo Soul",false, "./covers/channel_orange.jpg", "06", "07", "$7.49", "02", "https://www.youtube.com/watch?v=-qaO-i5rD9Y")
->>>>>>> e6b532fa6478d0e140ded29d3b1954810bb26e23
 
 //Array that stores Album class elements
 
