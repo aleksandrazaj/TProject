@@ -14,4 +14,12 @@ function albumPage(selectedAlbum) {
     
         var showAlbumPage = document.getElementById("showAlbums")
         showAlbumPage.innerHTML = html;
+
+        var youtubebtn = document.getElementsByClassName("youtubebtn");
+
+    for(i=0; i < youtubebtn.length; i++){
+        youtubebtn[i].addEventListener('click', function(e){
+            window.location.href = e.target.dataset.youtube;
+        });
+    }
 }
