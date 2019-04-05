@@ -17,23 +17,23 @@ class Album {
         return "<div class='column' onclick='albumPage(\"" + this.albumId +"\")'><img style='width:100%' src=" + this.cover + "></img><p>" + this.title + " " + this.artist +  "</p><h1 style='color:green'>" + this.price + "</h1></div>"
     }
     createAlbumList() {
-        return "<div class='column' onclick='albumPageArtist(\"" + this.albumId +"\")' ><img style='width:100%' src=" + this.cover + "></img><p>" + this.title + "</p><h1 style='color:green'>" + this.price + "</h1><p><button id='addCart'>Add to Cart</button></p></div>"
+        return "<div class='column' onclick='albumPageArtist(\"" + this.albumId +"\")' ><img style='width:100%' src=" + this.cover + "></img><p>" + this.title + "</p><h1 style='color:green'>" + this.price + "</h1><p><button id='addCart' class='add-cart-btn' data-id=" + this.albumId + ">Add to Cart</button><input type='number' class='quantity' min='1' max='99' value='1'></p></div>"
     }
     albumDisplayPage() {
-        return "<div class='column'><h1 style='color:green'>" + this.price + "</h1><img style='width:100%' src=" + this.cover + "></img><p>" + this.title + "</p><p><button id='addCart'>Add to Cart</button></p></div>"
+        return "<div class='column'><h1 style='color:green'>" + this.price + "</h1><img style='width:100%' src=" + this.cover + "></img><p>" + this.title + "</p><p><button id='addCart' class='add-cart-btn' data-id=" + this.albumId + ">Add to Cart</button><input type='number' class='quantity' min='1' max='99' value='1'></p></div>"
     } 
     albumInfo() {
         return "<div class='column'><ul style='list-style-type:none' id='albumInfo'><li>" + this.title + "</li><li>" + this.artist + "</li><li>" + this.genre + "</li></ul></div>"
     }
     displayNewReleases() {
-        return "<div class='column' onclick='albumPageNew(\"" + this.albumId +"\")'><img style='width:100%' src=" + this.cover + "></img><p>" + this.title + " " + this.artist +  "</p><h1 style='color:green'>" + this.price + "</h1><p><button id='addCart'>Add to Cart</button></p></div>"
+        return "<div class='column' onclick='albumPageNew(\"" + this.albumId +"\")'><img style='width:100%' src=" + this.cover + "></img><p>" + this.title + " " + this.artist +  "</p><h1 style='color:green'>" + this.price + "</h1><p></div>"
     }
     albumDisplayPageArtist() {
-        return "<div class='column'><h1 style='color:green'>" + this.price + "</h1><img style='width:100%' src=" + this.cover + "></img><p>" + this.title + "</p><p><button id='addCart'>Add to Cart</button></p></div>"
+        return "<div class='column'><h1 style='color:green'>" + this.price + "</h1><img style='width:100%' src=" + this.cover + "></img><p>" + this.title + "</p><p><button id='addCart' class='add-cart-btn' data-id=" + this.albumId + ">Add to Cart</button><input type='number' class='quantity' min='1' max='99' value='1'></p></div>"
     }
  
     genreDisplayPage() {
-        return "<div class='column' onclick='genrePage(\"" + this.genreId +"\")'><img style='width:100%' src=" + this.cover + "></img><p>" + this.title + " " + this.artist + "</p><h1 style='color:green'>" + this.price + "</h1><p><button id='addCart'>Add to Cart</button></p></div>" 
+        return "<div class='column' onclick='genrePage(\"" + this.genreId +"\")'><img style='width:100%' src=" + this.cover + "></img><p>" + this.title + " " + this.artist + "</p><h1 style='color:green'>" + this.price + "</h1><p><button id='addCart' class='add-cart-btn' data-id=" + this.albumId + ">Add to Cart</button><input type='number' class='quantity' min='1' max='99' value='1'></p></div>" 
     }
     youtubeSample() {
         return "<div class='column'><button id='youtube' class='youtubebtn' data-youtube=" + this.youtube + "></button></div>"
