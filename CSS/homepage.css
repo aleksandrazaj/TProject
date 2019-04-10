@@ -38,8 +38,8 @@
   
   /* Change color on hover */
   .topnav a:hover {
-    background-color: #FFC4C4;
-    color: black;
+    background-color: #ff6666;
+    color: white;
   }
   
   /* Create three unequal columns that floats next to each other */

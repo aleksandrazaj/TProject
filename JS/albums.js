@@ -61,7 +61,7 @@ albums.push(new Album("LEMONADE", "Beyonce", "R&B", false, "./covers/lemonade.jp
 albums.push(new Album("1999", "Joey Bada$$", "Hip Hop", false, "./covers/1999.jpg", "02", "10", "$5.55", "01", "https://www.youtube.com/watch?v=51e1gIkzHgk"))
 albums.push(new Album("THE WATER[S]", "Mick Jenkins", "Hip Hop", false, "./covers/waters.jpg", "08", "11", "$4.50", "01", "https://www.youtube.com/watch?v=F-4KiszXxHM"))
 albums.push(new Album("KONNICHIWA", "Skepta", "Grime", false, "./covers/konnichiwa.jpg", "09", "12", "$7.99", "04", "https://www.youtube.com/watch?v=czLQoG01PFs"))
-albums.push(new Album("OXNARD", "Anderson .Paak", "R&B", true, "./covers/oxnard.jpg", "10","13", "$11.99", "03", "https://www.youtube.com/watch?v=yZlEj8XRLAw"))
+albums.push(new Album("OXNARD", "Anderson .Paak", "R&B", true, "./covers/oxnard.jpg", "10","13", "$11.99", "03", "https://www.youtube.com/watch?v=7A1utb0NrHU"))
 
 // Function that creates albums as columns in HTML row "showAlbums"
 function displayElements() {
@@ -75,3 +75,4 @@ display.innerHTML = html;
 }
 
 displayElements();
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Log in</title>
+    <link rel="stylesheet" href="CSS/startpage.css">
+    
+</head>
+<body>
+    <div id='container'>
+        <div class='signup'>
+           <form>
+             <input type='text' placeholder='First Name' id="firstName_register" required />
+             <input type='text' placeholder='Last Name' id="lastName_register" required />
+             <input type='text' placeholder='Username' id="username_register" required />
+             <input type='text' placeholder='Email' id="emailAddress_register" required />
+             <input type='text' placeholder='Billing Address' id="billingAddress_register" required />
+             <input type='password' placeholder='Password' id="password_register" required />
+             <input type='password' placeholder='Confirm Password' required />
+             <input type='text' placeholder='Age' id="age_register" required />
+             <input type='button' placeholder='SUBMIT' id="register" value="Register" onclick="addUser()"/>
+           </form>
+        </div>
+        <div class='whysign'>
+          <h1>Sign up</h1>
+          <p>Please sign up or <a href=login.html>log in</a> to use the store.</p>
+          <p>Buy albums: 
+            <span>Hip-Hop</span>
+            <span>R&B</span>
+            <span>Soul</span>
+            <span>Grime</span>
+            <span>More</span>
+          </p>
+          <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+        </div>
+      </div>
+
+<script src="JS/users.js"></script>
+</body>
+</html>

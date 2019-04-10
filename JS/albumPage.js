@@ -1,5 +1,3 @@
-
-
 function albumPage(selectedAlbum) {
     var html = "";
     for (i = 0; i < albums.length; i++) {
@@ -8,7 +6,7 @@ function albumPage(selectedAlbum) {
             html += albums[i].albumInfo();
             html += albums[i].youtubeSample();
     
-                
+               
         }
     }
     
@@ -22,4 +20,8 @@ function albumPage(selectedAlbum) {
             window.location.href = e.target.dataset.youtube;
         });
     }
-}
+    
+} 
+
+
+

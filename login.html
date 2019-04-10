@@ -4,47 +4,33 @@
 <title>Music Store Prototype 2</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="CSS/login.css">
+<link rel="stylesheet" href="CSS/startpage.1.css">
 </head>
 <body>
 
 <div class="header">
-  <h1>Music Store Prototype 2</h1>
+
 </div>
 
-<div class="topnav" id="theTopnav">
-    <a href="index5.html" class="active">Home</a>
-    <a href="newReleases.html">New releases</a>
-    <a href="genres.html">Genres</a>
-    <a href="artists.html">Artists</a>
-    <a href="#support">Support</a>
-    <a href="login.html">Log in</a>
-    
-    </div>
+<div id='container'>
+  <div class='signup'>
+     <form>
+       <input type='text' placeholder='Username' id="username_login" required />
+       <input type='password' placeholder='Password' id="password_login" required />
+       <input type='button' placeholder='SUBMIT' id="login" value="Log in" onclick="validate()" />
+     </form>
+  </div>
+  <div class='whysign'>
+    <h1>Log in</h1>
+    <p>Please log in or <a href=startpage.html>register</a> to use the store.</p>
+  </div>
 </div>
 
-<div class="container">
-    <div class="main">
-    <h2>Log in</h2>
-    <form id="form_id" method="post" name="myform">
-    <label>User Name :</label>
-    <input type="text" name="username" id="username"/>
-    <label>Password :</label>
-    <input type="password" name="password" id="password"/>
-    <input type="button" value="Login" id="submit" onclick="validate()"/>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p>Don't have an account? <a href=signup.html>Sign up</a></p>
-    </form>
-    </div>
-    </div>
 
-<!--<p><span id="loginResult"></span></p>-->
 
-<script src="JS/login.js"></script>
 <script src="JS/users.js"></script>
-<script src="JS/signup.js"></script>
+<script src="JS/login.js"></script>
+
 
 
 </body>
