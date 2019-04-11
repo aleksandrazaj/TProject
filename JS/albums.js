@@ -38,7 +38,37 @@ class Album {
     youtubeSample() {
         return "<div class='column'><button id='youtube' class='youtubebtn' data-youtube=" + this.youtube + "></button></div>"
     }
-    
+    createCartElement() {
+        return `<div class="item">
+                  <div class="buttons">
+                    <span class="delete-btn"></span>
+                    <span class="like-btn"></span>
+                  </div>
+               
+                  <div class="image">
+                    <img src="CSS/item-1.png" alt="" />
+                  </div>
+               
+                  <div class="description">
+                    <span>${this.title}</span>
+                    <span>${this.artist}</span>
+                    <span>${this.genre}</span>
+                  </div>
+               
+                  <div class="quantity">
+                    <button class="plus-btn" type="button" name="button">
+                      <img src="CSS/plus.svg" alt="" />
+                    </button>
+                    <input type="text" name="name" value="1">
+                    <button class="minus-btn" type="button" name="button">
+                      <img src="CSS/minus.svg" alt="" />
+                    </button>
+                  </div>
+                  
+               
+                  <div class="total-price">${this.price}</div>
+                </div>`
+}
 
 }
 //Elements of the class
@@ -61,7 +91,7 @@ albums.push(new Album("LEMONADE", "Beyonce", "R&B", false, "./covers/lemonade.jp
 albums.push(new Album("1999", "Joey Bada$$", "Hip Hop", false, "./covers/1999.jpg", "02", "10", "$5.55", "01", "https://www.youtube.com/watch?v=51e1gIkzHgk"))
 albums.push(new Album("THE WATER[S]", "Mick Jenkins", "Hip Hop", false, "./covers/waters.jpg", "08", "11", "$4.50", "01", "https://www.youtube.com/watch?v=F-4KiszXxHM"))
 albums.push(new Album("KONNICHIWA", "Skepta", "Grime", false, "./covers/konnichiwa.jpg", "09", "12", "$7.99", "04", "https://www.youtube.com/watch?v=czLQoG01PFs"))
-albums.push(new Album("OXNARD", "Anderson .Paak", "R&B", true, "./covers/oxnard.jpg", "10","13", "$11.99", "03", "https://www.youtube.com/watch?v=yZlEj8XRLAw"))
+albums.push(new Album("OXNARD", "Anderson .Paak", "R&B", true, "./covers/oxnard.jpg", "10","13", "$11.99", "03", "https://www.youtube.com/watch?v=7A1utb0NrHU"))
 
 // Function that creates albums as columns in HTML row "showAlbums"
 function displayElements() {
@@ -75,3 +105,26 @@ display.innerHTML = html;
 }
 
 displayElements();
+
+/*
+//Adds event listener to every add to cart button in order to render HTML into the shopping cart
+var addCartBtn = document.getElementsByClassName('add-cart-btn')
+for(i = 0; i < addCartBtn.length; i++) {
+    addCartBtn[i].addEventListener('click', saveToLS())
+}
+
+//Function that creates HTML element for album added to cart
+function renderHTMLCart() {
+    var html = "";
+    for (i = 0; i < albums.length; i++) {
+        html += albums[i].createCartElement();
+    }
+    //Tells the function where to create the rows
+    var display = document.getElementById("shopping-cart");
+    display.innerHTML = html;
+    }
+*/
+
+
+
+
