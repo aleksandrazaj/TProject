@@ -38,7 +38,37 @@ class Album {
     youtubeSample() {
         return "<div class='column'><button id='youtube' class='youtubebtn' data-youtube=" + this.youtube + "></button></div>"
     }
-    
+    createCartElement() {
+        return `<div class="item">
+                  <div class="buttons">
+                    <span class="delete-btn"></span>
+                    <span class="like-btn"></span>
+                  </div>
+               
+                  <div class="image">
+                    <img src="CSS/item-1.png" alt="" />
+                  </div>
+               
+                  <div class="description">
+                    <span>${this.title}</span>
+                    <span>${this.artist}</span>
+                    <span>${this.genre}</span>
+                  </div>
+               
+                  <div class="quantity">
+                    <button class="plus-btn" type="button" name="button">
+                      <img src="CSS/plus.svg" alt="" />
+                    </button>
+                    <input type="text" name="name" value="1">
+                    <button class="minus-btn" type="button" name="button">
+                      <img src="CSS/minus.svg" alt="" />
+                    </button>
+                  </div>
+                  
+               
+                  <div class="total-price">${this.price}</div>
+                </div>`
+}
 
 }
 //Elements of the class
@@ -75,4 +105,26 @@ display.innerHTML = html;
 }
 
 displayElements();
+
+/*
+//Adds event listener to every add to cart button in order to render HTML into the shopping cart
+var addCartBtn = document.getElementsByClassName('add-cart-btn')
+for(i = 0; i < addCartBtn.length; i++) {
+    addCartBtn[i].addEventListener('click', saveToLS())
+}
+
+//Function that creates HTML element for album added to cart
+function renderHTMLCart() {
+    var html = "";
+    for (i = 0; i < albums.length; i++) {
+        html += albums[i].createCartElement();
+    }
+    //Tells the function where to create the rows
+    var display = document.getElementById("shopping-cart");
+    display.innerHTML = html;
+    }
+*/
+
+
+
 

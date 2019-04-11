@@ -10,6 +10,7 @@ class User {
 
 }
 
+
 var users = [];
 users.push(new User("admin", "admin", "admin@admin.com", "Kuba", "Dejnek", "23", "Copenhagen"))
 
@@ -22,10 +23,16 @@ function addUser() {
     var ageUI = document.getElementById("age_register").value
     var billingAddressUI = document.getElementById("billingAddress_register").value
 
-    users.push(new User(usernameUI, passwordUI, emailAddressUI, firstNameUI, lastNameUI, ageUI, billingAddressUI))
+    if (usernameUI.length == 0 || passwordUI.length == 0 || emailAddressUI.length == 0 || firstNameUI.length == 0 || lastNameUI.length == 0 || ageUI.length == 0 || billingAddressUI.lenght == 0) {
+        alert("Please fill in the form.")
+    } else {
+         users.push(new User(usernameUI, passwordUI, emailAddressUI, firstNameUI, lastNameUI, ageUI, billingAddressUI))
     localStorage.setItem('userData', JSON.stringify(users))
     alert('Welcome' + ' '+ firstNameUI + '. You can now log in to access the store')
     window.location.replace('login.html')
+    }
+
+   
     
 }
 
