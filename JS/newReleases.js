@@ -1,3 +1,4 @@
+//Generates HTML content for newReleases.html
 function newReleases() {
     var html = "";
     for (i = 0; i < albums.length; i++) {
