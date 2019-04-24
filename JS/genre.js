@@ -1,3 +1,4 @@
+//New class to use for elements in genres.html
 class Genre { 
     constructor (genre, index, cover) { 
     this.genre = genre 
@@ -10,15 +11,14 @@ class Genre {
     }
     }
 
+//Elements of the class are stored in genres array
+var genres = []
+genres.push(new Genre ("Hip Hop", "01", "./covers/hiphop.jpg" ))
+genres.push(new Genre ("Neo Soul", "02", "./covers/NeoSoul.jpg"))
+genres.push(new Genre ("RnB", "03", "./covers/RnB.jpg"))
+genres.push(new Genre ("Grime", "04", "./covers/Grime.jpeg"))
 
-var genre1 = new Genre ("Hip Hop", "01", "./covers/hiphop.jpg" )
-var genre2 = new Genre ("Neo Soul", "02", "./covers/NeoSoul.jpg")
-var genre3 = new Genre ("RnB", "03", "./covers/RnB.jpg")
-var genre4 = new Genre ("Grime", "04", "./covers/Grime.jpeg")
-
-var genres = [genre1, genre2, genre3, genre4]
-//function to display all genres 
-
+//function to display all genre html column divs at genres.html
 function displayGenres() {
     var html = ""
     for (i = 0; i< genres.length; i++) {

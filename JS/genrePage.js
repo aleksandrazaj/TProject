@@ -1,3 +1,4 @@
+//Replaces HTML content at genres.html on click
 function genrePage(selectedGenre) {
     var html = "";
     for (i = 0; i < albums.length; i++) {

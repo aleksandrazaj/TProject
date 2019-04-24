@@ -1,3 +1,4 @@
+//Replaces HTML content of newReleases.html with clicked on album page
 function albumPageNew(selectedAlbum) {
     var html = "";
     for (i = 0; i < albums.length; i++) {

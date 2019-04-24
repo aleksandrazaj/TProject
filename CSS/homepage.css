@@ -11,12 +11,16 @@
     
     padding: 20px;
     text-align: center;
-    font-family: helvetica;
+    font-family: 'Monoton', cursive;
     background-color: whitesmoke;
     text-align:center;
     background-size:150px;
-    font-size:15px;
+    font-size:20px;
     
+  }
+
+  h1 {
+    font-weight: normal;
   }
   
   /* Style the top navigation bar */
@@ -33,7 +37,7 @@
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-family: helvetica;
+    font-family: 'Roboto', sans-serif;
   }
   
   /* Change color on hover */
@@ -86,6 +90,7 @@
     margin: 3%;
     overflow: hidden;
     width: 400px;
+    font-family: 'Roboto', sans-serif;
   }
   .column img {
     max-width: 100%;
@@ -200,4 +205,5 @@
   background-position: center;
   border: none;
   position: right;
+  margin: 75px auto
 }

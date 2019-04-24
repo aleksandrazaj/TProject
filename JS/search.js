@@ -1,16 +1,4 @@
-/*function displayElements(albums) {
-    var html = "";
-    for (i = 0; i < albums.length; i++)
-    if () {
-        html += albums[i].createHTML();
-    }
-    
-    var display = document.getElementById("showAlbums");
-    display.innerHTML = html;
-    }
-    
-    displayElements(albums); */
-
+//Searches through the column div to find matching query
     function search() {
         var input = document.getElementById("myInput");
         var filter = input.value.toLowerCase();
