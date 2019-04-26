@@ -1,41 +1,42 @@
-var cart = []
+
+var cart = [2]
 
 //Loads the current database of albums
 function getAlbums() {
     return albums
 }
 
+getAlbums();
+
 // Finds album by ID
-const findProductById = (data, albumId) => {
-    const selectedAlbum = data.find((selectedAlbum) => {
-        return selectedAlbum.id === albumId
+const findProductById = (albumData, id) => {
+    const product = albumData.find((product) => {
+            return product.albumId === id
     })
 
-    return selectedAlbum
+    return product
 }
 
-// Saves the cart to local storage
+
 const saveCart = () => {
     localStorage.setItem('cart', JSON.stringify(cart))
 }
 
+
 //Adds quantity and album by ID
-const addToCart = (albumId, quant) => {
-    console.log(`${albumId} has been added ${quant} times`);
-    if (!findProductById(cart, albumId)) {
-        cart.push({...findProductById(albums, albumId), quantity: quant})
+const addToCart = (id, quant) => {
+    console.log(`${id} has ben added`);
+    if (!findProductById(cart, id)) {
+            cart.push({...findProductById(albums, id), quantity: quant})
     } else {
-        findProductById(cart, albumId).quantity += quant
+            alert("Already in the cart")
     }
     saveCart()
-    }
-
-const buttons = document.getElementsByClassName('add-cart-btn')
-    for (let i = 0; i < buttons.length; i++) {
-        buttons[i].addEventListener('click', (event) => {
-            addToCart(event.target.dataset.albumId)
-        })
 }
+
+findProductById();
+
+
 
 //Loads the cart from local storage
 const loadCart = function() {
@@ -55,7 +56,7 @@ const calculateTotal = () => {
     let total = 0
 
     cart.forEach((item) => {
-        total += item.price * item.quantity
+        total += item.price
     })
     return total
 }

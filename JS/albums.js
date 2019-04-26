@@ -18,11 +18,11 @@ class Album {
     }
     //Creates a list of albums assigned to the specific artist
     createAlbumList() {
-        return "<div class='column' onclick='albumPageArtist(\"" + this.albumId +"\")' ><img style='width:100%' src=" + this.cover + "></img><p>" + this.title + "</p><h1 style='color:green'>" + this.price + "</h1><p><button id='addCart' class='add-cart-btn' data-id=" + this.albumId + ">Add to Cart</button><input type='number' class='quantity' min='1' max='99' value='1'></p></div>"
+        return "<div class='column' onclick='albumPageArtist(\"" + this.albumId +"\")' ><img style='width:100%' src=" + this.cover + "></img><p>" + this.title + "</p><h1 style='color:green'>" + this.price + "</h1><p><button id='addCart' class='add-cart-btn' data-id=" + this.albumId + ">Add to Cart</button></p></div>"
     }
     //Replaces the HTML elements at index.html with a display page of clicked at album
     albumDisplayPage() {
-        return "<div class='column'><h1 style='color:green'>" + this.price + "</h1><img style='width:100%' src=" + this.cover + "></img><p>" + this.title + "</p><p><button id='addCart' class='add-cart-btn' data-id=" + this.albumId + ">Add to Cart</button><input type='number' class='quantity' min='1' max='99' value='1'></p></div>"
+        return "<div class='column'><h1 style='color:green'>" + this.price + "</h1><img style='width:100%' src=" + this.cover + "></img><p>" + this.title + "</p><p><button id='addCart' class='add-cart-btn' data-id=" + this.albumId + " onclick='addToCart(" + this.albumId + ")'>Add to Cart</button></p></div>"
     } 
     //Creates a new div in album display page with artist, title and genre info about the album
     albumInfo() {
@@ -34,11 +34,11 @@ class Album {
     }
     //Replaces the HTML created by createAlbumList() with HTML of clicked at album
     albumDisplayPageArtist() {
-        return "<div class='column'><h1 style='color:green'>" + this.price + "</h1><img style='width:100%' src=" + this.cover + "></img><p>" + this.title + "</p><p><button id='addCart' class='add-cart-btn' data-id=" + this.albumId + ">Add to Cart</button><input type='number' class='quantity' min='1' max='99' value='1'></p></div>"
+        return "<div class='column'><h1 style='color:green'>" + this.price + "</h1><img style='width:100%' src=" + this.cover + "></img><p>" + this.title + "</p><p><button id='addCart' class='add-cart-btn' data-id=" + this.albumId + ">Add to Cart</button></p></div>"
     }
     //Creates html divs for each genre that the user can click on to sort all albums by genre
     genreDisplayPage() {
-        return "<div class='column' onclick='genrePage(\"" + this.genreId +"\")'><img style='width:100%' src=" + this.cover + "></img><p>" + this.title + " " + this.artist + "</p><h1 style='color:green'>" + this.price + "</h1><p><button id='addCart' class='add-cart-btn' data-id=" + this.albumId + ">Add to Cart</button><input type='number' class='quantity' min='1' max='99' value='1'></p></div>" 
+        return "<div class='column' onclick='genrePage(\"" + this.genreId +"\")'><img style='width:100%' src=" + this.cover + "></img><p>" + this.title + " " + this.artist + "</p><h1 style='color:green'>" + this.price + "</h1><p><button id='addCart' class='add-cart-btn' data-id=" + this.albumId + ">Add to Cart</button></div>" 
     }
     //Adds a clickable youtube button to album display page
     youtubeSample() {
@@ -49,7 +49,6 @@ class Album {
         return `<div class="item">
                   <div class="buttons">
                     <span class="delete-btn"></span>
-                    <span class="like-btn"></span>
                   </div>
                
                   <div class="image">
