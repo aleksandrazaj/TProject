@@ -27,7 +27,7 @@ generateCartDOM()
 function cartElement(item) {
     return `<div class="item">
               <div class="remove-buttons">
-                <span class="delete-btn"></span>
+                <span class="delete-btn" data-name=${item.title}></span>
               </div>
            
               <div class="image">
@@ -43,10 +43,16 @@ function cartElement(item) {
             </div>`
 }
 
-var removeButtons = document.getElementsByClassName('remove-buttons')
+var removeButtons = document.getElementsByClassName('delete-btn')
 console.log(removeButtons);
 for (let i = 0; i < removeButtons.length; i++) {
-  removeButtons[i].addEventListener('click', (event) => {
-    albums.splice()
+  var button1 = removeButtons[i]
+  button1.addEventListener('click', function(event){
+    var buttonClicked = event.target
+    buttonClicked.parentElement.parentElement.remove()
+    localStorage.removeItem('cart') //dzieki temu wszytskie lementy sie usuwaja z local storage i trzeba rozkminic jak zrobic zeby usuwal sie tylko jeden lel
   })
+  
 }
+
+
