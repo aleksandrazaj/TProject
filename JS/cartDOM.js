@@ -2,6 +2,7 @@ loadCart();
 
 console.log(cart);
 
+getCart();
 
 // Create a function that generates the DOM (Cart) structure
 const generateCartDOM = () => {
@@ -25,7 +26,7 @@ generateCartDOM()
 
 function cartElement(item) {
     return `<div class="item">
-              <div class="buttons">
+              <div class="remove-buttons">
                 <span class="delete-btn"></span>
               </div>
            
@@ -42,3 +43,10 @@ function cartElement(item) {
             </div>`
 }
 
+var removeButtons = document.getElementsByClassName('remove-buttons')
+console.log(removeButtons);
+for (let i = 0; i < removeButtons.length; i++) {
+  removeButtons[i].addEventListener('click', (event) => {
+    albums.splice()
+  })
+}

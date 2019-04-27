@@ -1,15 +1,13 @@
 var cart = [];
 
-function loadAlbums () {
+function loadAlbums() {
     return albums
     
 }
 loadAlbums();
 console.log(albums);
 
-const saveCart = () => {
-    localStorage.setItem('cart', JSON.stringify(cart))
-}
+
 
 // Create a function to find a product/item based on it's ID
 // The function should take both the array and ID as inputs
@@ -37,6 +35,10 @@ const addToCart = (id) => {
     saveCart()
 }
 
+const saveCart = () => {
+    localStorage.setItem('cart', JSON.stringify(cart))
+}
+
 
 // Create a function that loads the cart from localStorage
 const loadCart = function() {
@@ -44,6 +46,7 @@ const loadCart = function() {
             cart = []
     } else {
             cart = JSON.parse(localStorage.getItem('cart'))
+            console.log(cart)
     }
 
     // localStorage.getItem('cart') === null ? cart = [] : cart [] = JSON.parse(localStorage.getItem('cart'))
@@ -54,3 +57,4 @@ const getCart = () => {
     return cart
 }
 
+loadCart();
