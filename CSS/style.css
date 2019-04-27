@@ -10,25 +10,39 @@ body {
   height: 100%;
   padding: 10px;
   margin: 0;
-  background-color: #7EC855;
+  background-color: #ffffff;
   font-family: 'Roboto', sans-serif;
 }
 
-.shopping-cart {
-  width: 750px;
-  height: 423px;
-  margin: 80px auto;
-  background: #FFFFFF;
-  box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
-  border-radius: 6px;
+a {
+  text-align:center;
+  display:block;
+}
 
+/* unvisited link */
+a:link {
+  color: black;
+}
+
+/* visited link */
+a:visited {
+  color: black;
+}
+
+/* mouse over link */
+a:hover {
+  color: red;
+}
+
+
+.shopping-cart {
+  align-items: center;
   display: flex;
   flex-direction: column;
 }
 
 .title {
   height: 60px;
-  border-bottom: 1px solid #E1E8EE;
   padding: 20px 30px;
   color: #5E6977;
   font-size: 18px;
@@ -41,10 +55,6 @@ body {
   display: flex;
 }
 
-.item:nth-child(3) {
-  border-top:  1px solid #E1E8EE;
-  border-bottom:  1px solid #E1E8EE;
-}
 
 /* Buttons -  Delete and Like */
 .buttons {
@@ -161,9 +171,9 @@ input:focus {
     justify-content: center;
   }
   .image img {
-    width: 100px;
-    height:100px;
-    max-width: 100px;
+    width: 75px;
+    height:75px;
+    max-width: 75px;
   }
   .image {
     width: 100px;
