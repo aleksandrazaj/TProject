@@ -13,7 +13,7 @@ function validate() {
     for (i = 0; i < storedUsers.length; i++) {
         if (usernameInput == storedUsers[i].username && passwordInput == storedUsers[i].password) {
             //Redirect to the store
-            return window.open('index5.html')
+            return window.open('index.html')
             
 
         }
