@@ -22,7 +22,7 @@ class Album {
     }
     //Replaces the HTML elements at index.html with a display page of clicked at album
     albumDisplayPage() {
-        return "<div class='column'><h1 style='color:green'>" + this.price + "</h1><img style='width:100%' src=" + this.cover + "></img><p>" + this.title + "</p><p><button id='addCart' class='add-cart-btn' data-id=" + this.albumId + " onclick='addToCart(" + this.albumId + ")'>Add to Cart</button></p></div>"
+        return "<div class='column'><h1 style='color:green'>" + this.price + "</h1><img style='width:100%' src=" + this.cover + "></img><p>" + this.title + "</p><p><button id='addCart' class='add-cart-btn' data-id=" + this.albumId + ">Add to Cart</button></p></div>"
     } 
     //Creates a new div in album display page with artist, title and genre info about the album
     albumInfo() {
@@ -45,36 +45,7 @@ class Album {
         return "<div class='column'><button id='youtube' class='youtubebtn' data-youtube=" + this.youtube + "></button></div>"
     }
     //Creates HTML for new items in the shopping cart
-    createCartElement() {
-        return `<div class="item">
-                  <div class="buttons">
-                    <span class="delete-btn"></span>
-                  </div>
-               
-                  <div class="image">
-                    <img src="CSS/item-1.png" alt="" />
-                  </div>
-               
-                  <div class="description">
-                    <span>${this.title}</span>
-                    <span>${this.artist}</span>
-                    <span>${this.genre}</span>
-                  </div>
-               
-                  <div class="quantity">
-                    <button class="plus-btn" type="button" name="button">
-                      <img src="CSS/plus.svg" alt="" />
-                    </button>
-                    <input type="text" name="name" value="1">
-                    <button class="minus-btn" type="button" name="button">
-                      <img src="CSS/minus.svg" alt="" />
-                    </button>
-                  </div>
-                  
-               
-                  <div class="total-price">${this.price}</div>
-                </div>`
-}
+   
 
 }
 //Elements of the class are stored in albums array
@@ -104,6 +75,12 @@ display.innerHTML = html;
 }
 
 displayElements();
+
+
+
+
+
+
 
 /*
 //Adds event listener to every add to cart button in order to render HTML into the shopping cart

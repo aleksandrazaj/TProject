@@ -1,4 +1,4 @@
-var cart = [2]
+var cart = [];
 
 function loadAlbums () {
     return albums
@@ -54,18 +54,3 @@ const getCart = () => {
     return cart
 }
 
-
-// Create a function that calcualtes the total price of the cart
-const calculteTotal = () => {
-    let total = 0
-
-    cart.forEach((item) => {
-            total += item.price * item.quantity
-    })
-
-    return total
-}
-
-
-// Make sure to load the cart array
-loadCart()

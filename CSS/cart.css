@@ -161,7 +161,10 @@
     .image img {
       width: 50%;
     }
-    .image,
+    .image {
+      max-width: 100px;
+    }
+    ,
     .quantity,
     .description {
       width: 100%;
