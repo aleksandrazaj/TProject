@@ -50,7 +50,10 @@ for (let i = 0; i < removeButtons.length; i++) {
   button1.addEventListener('click', function(event){
     var buttonClicked = event.target
     buttonClicked.parentElement.parentElement.remove()
-    localStorage.removeItem('cart') //dzieki temu wszytskie lementy sie usuwaja z local storage i trzeba rozkminic jak zrobic zeby usuwal sie tylko jeden lel
+    loadCart()
+    cart.splice(i,1)
+    console.log(cart)
+    saveCart();
   })
   
 }
