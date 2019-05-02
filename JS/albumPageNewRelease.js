@@ -12,5 +12,13 @@ function albumPageNew(selectedAlbum) {
     
         var showAlbumPage = document.getElementById("showNewAlbums")
         showAlbumPage.innerHTML = html;
+
+        const buttons = document.getElementsByClassName('add-cart-btn')
+        console.log(buttons);
+        for (let i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', (event) => {
+            addToCart(event.target.dataset.id)
+        })
+    }
 }
 

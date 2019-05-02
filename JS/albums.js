@@ -14,7 +14,7 @@ class Album {
     
     // Creates a new html column div for each album at index5.html
     createHTML() {
-        return "<div class='column' onclick='albumPage(\"" + this.albumId +"\")'><img style='width:100%' src=" + this.cover + "></img><p>" + this.title + " " + this.artist +  "</p><h1 style='color:green'>" + this.price + "</h1></div>"
+        return "<div class='column' onclick='albumPage(\"" + this.albumId +"\")'><img style='width:100%' src=" + this.cover + "></img><p>" + this.title + " " + this.artist +  "</p><h1 style='color:green'>$" + this.price + "</h1></div>"
     }
     //Creates a list of albums assigned to the specific artist
     createAlbumList() {
@@ -50,18 +50,18 @@ class Album {
 }
 //Elements of the class are stored in albums array
 var albums = []
-albums.push(new Album("DAMN.","Kendrick Lamar","Hip Hop",false, "./covers/damn.png", "01", "01", "$7.99", "01", "https://youtu.be/tvTRZJ-4EyI"))
-albums.push(new Album("B4.DA.$$","Joey Bada$$","Hip Hop",false, "./covers/badass.jpg", "02", "02", "$8.49", "01"))
-albums.push(new Album("SELF-TITLED","Kids See Ghosts","Hip Hop", true, "./covers/ksg.jpg", "03", "03", "$9.99", "01"))
-albums.push(new Album("SLIME SEASON 3","Young Thug","Hip Hop",false, "./covers/slime_season_3.jpg", "04", "04", "$6.00", "01"))
-albums.push(new Album("RODEO","Travis Scott","Hip Hop",false, "./covers/rodeo.jpg", "05", "05", "$8.99", "01"))
-albums.push(new Album("CHANNEL ORANGE","Frank Ocean","Neo Soul",false, "./covers/channel_orange.jpg", "06", "07", "$7.49", "02"))
-albums.push(new Album("ASTROWORLD", "Travis Scott", "Hip Hop", true, "./covers/astroworld.jpg", "05", "08", "$12.99", "01", "https://www.youtube.com/watch?v=Z6d3BofQqN0" ))
-albums.push(new Album("LEMONADE", "Beyonce", "R&B", false, "./covers/lemonade.jpg", "07", "09", "$8.49", "03", "https://www.youtube.com/watch?v=WDZJPJV__bQ"))
-albums.push(new Album("1999", "Joey Bada$$", "Hip Hop", false, "./covers/1999.jpg", "02", "10", "$5.55", "01", "https://www.youtube.com/watch?v=51e1gIkzHgk"))
-albums.push(new Album("THE WATER[S]", "Mick Jenkins", "Hip Hop", false, "./covers/waters.jpg", "08", "11", "$4.50", "01", "https://www.youtube.com/watch?v=F-4KiszXxHM"))
-albums.push(new Album("KONNICHIWA", "Skepta", "Grime", false, "./covers/konnichiwa.jpg", "09", "12", "$7.99", "04", "https://www.youtube.com/watch?v=czLQoG01PFs"))
-albums.push(new Album("OXNARD", "Anderson .Paak", "R&B", true, "./covers/oxnard.jpg", "10","13", "$11.99", "03", "https://www.youtube.com/watch?v=7A1utb0NrHU"))
+albums.push(new Album("DAMN.","Kendrick Lamar","Hip Hop",false, "./covers/damn.png", "01", "01", 7.99, "01", "https://youtu.be/tvTRZJ-4EyI"))
+albums.push(new Album("B4.DA.$$","Joey Bada$$","Hip Hop",false, "./covers/badass.jpg", "02", "02", 8.49, "01"))
+albums.push(new Album("SELF-TITLED","Kids See Ghosts","Hip Hop", true, "./covers/ksg.jpg", "03", "03", 9.99, "01"))
+albums.push(new Album("SLIME SEASON 3","Young Thug","Hip Hop",false, "./covers/slime_season_3.jpg", "04", "04", 6.20, "01"))
+albums.push(new Album("RODEO","Travis Scott","Hip Hop",false, "./covers/rodeo.jpg", "05", "05", 8.99, "01"))
+albums.push(new Album("CHANNEL ORANGE","Frank Ocean","Neo Soul",false, "./covers/channel_orange.jpg", "06", "07", 7.49, "02"))
+albums.push(new Album("ASTROWORLD", "Travis Scott", "Hip Hop", true, "./covers/astroworld.jpg", "05", "08", 12.99, "01", "https://www.youtube.com/watch?v=Z6d3BofQqN0" ))
+albums.push(new Album("LEMONADE", "Beyonce", "R&B", false, "./covers/lemonade.jpg", "07", "09", 8.49, "03", "https://www.youtube.com/watch?v=WDZJPJV__bQ"))
+albums.push(new Album("1999", "Joey Bada$$", "Hip Hop", false, "./covers/1999.jpg", "02", "10", 5.55, "01", "https://www.youtube.com/watch?v=51e1gIkzHgk"))
+albums.push(new Album("THE WATER[S]", "Mick Jenkins", "Hip Hop", false, "./covers/waters.jpg", "08", "11", 4.50, "01", "https://www.youtube.com/watch?v=F-4KiszXxHM"))
+albums.push(new Album("KONNICHIWA", "Skepta", "Grime", false, "./covers/konnichiwa.jpg", "09", "12", 7.99, "04", "https://www.youtube.com/watch?v=czLQoG01PFs"))
+albums.push(new Album("OXNARD", "Anderson .Paak", "R&B", true, "./covers/oxnard.jpg", "10","13", 11.99, "03", "https://www.youtube.com/watch?v=7A1utb0NrHU"))
 
 // Function that creates albums as columns in HTML row "showAlbums" at index5.html
 function displayElements() {

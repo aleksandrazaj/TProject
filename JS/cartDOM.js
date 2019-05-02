@@ -1,7 +1,4 @@
 loadCart();
-
-console.log(cart);
-
 getCart();
 
 // Create a function that generates the DOM (Cart) structure
@@ -18,12 +15,26 @@ const generateCartDOM = () => {
             html += cartElement(item)
         })
     }
-
+    //Adds checkout button at the end
+    html += checkout()
+    
     shoppingCart.innerHTML = html
+
+  
 }
 
 generateCartDOM() 
 
+//HTML for the checkout button
+function checkout() {
+  return `<div class='bttn' >Checkout</div>`
+}
+
+function totalDOM() {
+  return `<p id='total'></p>`
+}
+
+//HTML for cart elements
 function cartElement(item) {
     return `<div class="item">
               <div class="remove-buttons">
@@ -39,10 +50,12 @@ function cartElement(item) {
                 <span>${item.artist}</span>
                 <span>${item.genre}</span>
               </div>
-              <div class="total-price">${item.price}</div>
+              <div class="total-price">$${item.price}</div>
             </div>`
 }
 
+//Function to remove elements from the cart
+//Get the "X" buttons
 var removeButtons = document.getElementsByClassName('delete-btn')
 console.log(removeButtons);
 for (let i = 0; i < removeButtons.length; i++) {
@@ -51,11 +64,33 @@ for (let i = 0; i < removeButtons.length; i++) {
     var buttonClicked = event.target
     buttonClicked.parentElement.parentElement.remove()
     loadCart()
-    cart.splice(i,1)
+    cart.splice(i)
     console.log(cart)
     saveCart();
   })
   
 }
+
+
+const calculateTotal = () => {
+  const cart = getCart()
+  var priceArray = []
+  var sum = 0
+  for (let i = 0; i < cart.length; i++) {
+  var priceValues = cart[i].price
+  priceArray.push(priceValues) }
+  for (let i = 0; i < priceArray.length; i++) {
+    sum += priceArray[i]
+  }
+ console.log(sum) 
+ document.getElementById('total').innerHTML = "Total price: $" + sum
+
+ }
+
+ calculateTotal();
+
+
+
+
 
 
