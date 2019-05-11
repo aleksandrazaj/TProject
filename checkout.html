@@ -4,14 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Checkout</title>
+    <link rel="stylesheet" href="CSS/checkout.css">
+   
 </head>
-<body>
+<style>
+* {
+  box-sizing: border-box;
+}
 
-        <div id='bank'>Please make bank transfer:<br>
-            Musicstore<br>
-            Fallkoner Alle 36, 1879 Frederiksberg<br>
-            Reg nr: 2113 Bank Account number: 123456789<br></div>
-    
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+
+}
+
+#totalCheckout {
+    font-size: 30px;
+}
+
+</style>
+<body>
+        <h1 align="center">Your purchase</h1>
+        <div id='totalCheckout' align='center'></div>
+        <div align="center"><br >Choose method of payment:<br></div>
+        <br></br>
+        <div class="totalprice" align="center">
+                <div class="column">
+                  <a href="https://www.paypal.com/dk/home" target="_blank" ><img src="CSS/paypal.png" alt="paypal" style="width:65%"></a>
+                </div>
+                <div class="column">
+                <a href="https://danskebank.dk/privat" target="_blank"><img src="CSS/danske.jpg" alt="danske" style="width:65%"></a>
+                </div>
+                <div class="column">
+                <a href="https://www.nordea.dk/" target="_blank"><img src="CSS/nordea.svg" alt="nordea" style="width:65%"></a>
+                </div>
+              </div>
+              <div id='bank' align="center"><br><br></br><br>Please make bank transfer to:<br>
+                Musicstore
+                Fallkoner Alle 36, 1879 Frederiksberg<br>
+                Reg nr: 2113 Bank Account number: 123456789<br></div>
+
+
+<script src='JS/checkoutDOM.js'></script>
 </body>
 </html>

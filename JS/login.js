@@ -1,4 +1,4 @@
-//Array to stored users loaded from local storage
+//Array to store users loaded from local storage
 storedUsers = [];
 
 //Loads user information from local storage into the array
@@ -13,7 +13,10 @@ function validate() {
     for (i = 0; i < storedUsers.length; i++) {
         if (usernameInput == storedUsers[i].username && passwordInput == storedUsers[i].password) {
             //Redirect to the store
+            var activeUser = storedUsers[i]
+            localStorage.setItem('activeUser', JSON.stringify(activeUser))
             return window.location.replace('index.html')
+            
             
 
         }

@@ -27,9 +27,15 @@ generateCartDOM()
 
 //HTML for the checkout button
 function checkout() {
-  return `<div class='bttn' >Checkout</div>`
+  return `<div class='bttn' onclick='checkoutPage()' >Checkout</div>`
 }
 
+
+function checkoutPage() {
+  location.href='checkout.html'
+}
+
+//HTML for total price display
 function totalDOM() {
   return `<p id='total'></p>`
 }
@@ -58,32 +64,48 @@ function cartElement(item) {
 //Get the "X" buttons
 var removeButtons = document.getElementsByClassName('delete-btn')
 console.log(removeButtons);
+//iterates through the buttons
 for (let i = 0; i < removeButtons.length; i++) {
   var button1 = removeButtons[i]
+  //assigns an event listener to each button
   button1.addEventListener('click', function(event){
     var buttonClicked = event.target
+    //two parentElement method used to remove the entire div (not the divs inside the div)
     buttonClicked.parentElement.parentElement.remove()
+    //load the cart again
     loadCart()
+    //remove the element from the cart
     cart.splice(i)
     console.log(cart)
+    //save the cart again for later use
     saveCart();
+    calculateTotal();
   })
   
 }
 
-
+//Function to calculate total price of the order
 const calculateTotal = () => {
+  //gets the cart
   const cart = getCart()
+  //empty array to store the values
   var priceArray = []
+  //base for summation
   var sum = 0
+  //goes through the cart
   for (let i = 0; i < cart.length; i++) {
+    //push each value to the array
   var priceValues = cart[i].price
   priceArray.push(priceValues) }
   for (let i = 0; i < priceArray.length; i++) {
+    //sum up
     sum += priceArray[i]
   }
  console.log(sum) 
+ //display the sum
  document.getElementById('total').innerHTML = "Total price: $" + sum
+ 
+localStorage.setItem('total', JSON.stringify(sum))
 
  }
 

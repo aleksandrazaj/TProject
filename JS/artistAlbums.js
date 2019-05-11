@@ -12,10 +12,15 @@ function displayArtistAlbums(selectedArtistId) {
     var display = document.getElementById("showArtists")
     display.innerHTML = html;
     
+    //Event listener for add to cart buttons
+    //Grabbing all of the buttons
     const buttons = document.getElementsByClassName('add-cart-btn')
     console.log(buttons);
+    //iterates through the buttons
     for (let i = 0; i < buttons.length; i++) {
+        //event listener for each one
     buttons[i].addEventListener('click', (event) => {
+        //trigges addToCart() onclick
         addToCart(event.target.dataset.id)
     })
 }

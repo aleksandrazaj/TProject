@@ -1,19 +1,20 @@
 //User class for login and registration purposes
 class User {
-    constructor(username,password,emailAddress,firstName,lastName,age,billingAddress) {
+    constructor(username,password,emailAddress,firstName,lastName,age,billingAddress, cart) {
     this.username = username
     this.password = password
     this.emailAddress = emailAddress
     this.firstName = firstName
     this.lastName = lastName
     this.age = age
-    this.billingAddress = billingAddress }
+    this.billingAddress = billingAddress
+    this.cart = cart }
 
 }
 
+
 //Array stores all registered users
 var users = [];
-users.push(new User("admin", "admin", "admin@admin.com", "Kuba", "Dejnek", "23", "Copenhagen"))
 
 //Adds new user to the user array based on the input provided in registration form by the user
 function addUser() {
@@ -40,7 +41,7 @@ function addUser() {
         alert("All fields are required")
     } else {
         //Adds a new user to the array
-         users.push(new User(usernameUI, passwordUI, emailAddressUI, firstNameUI, lastNameUI, ageUI, billingAddressUI))
+         users.push(new User(usernameUI, passwordUI, emailAddressUI, firstNameUI, lastNameUI, ageUI, billingAddressUI, null))
     //Saves all registered users to local storage
     localStorage.setItem('userData', JSON.stringify(users))
     //Welcome alert
